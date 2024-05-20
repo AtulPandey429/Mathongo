@@ -13,7 +13,7 @@ connectDB();
 // Middleware
 app.use(express.json());
 app.use('/api/lists', listRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/lists', userRoutes);
 app.use('/api/email', emailRoutes);
 
 // Error Handler
