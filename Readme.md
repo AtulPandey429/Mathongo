@@ -24,8 +24,7 @@ Design and implement a RESTful API for managing a list of users with customizabl
 - Optional: Any Message Queue (for robustness and scalability)
 
 ## File Structure:
-
-api/
+```api/
 ├── controllers/
 │   ├── listController.js
 │   ├── userController.js
@@ -53,7 +52,7 @@ api/
 │   └── errorMiddleware.js
 ├── .env
 ├── app.js
-└── package.json
+└── package.json```
 
 
 
