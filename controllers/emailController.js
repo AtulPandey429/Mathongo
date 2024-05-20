@@ -13,7 +13,7 @@ exports.sendEmails = async (req, res) => {
     }
 
     const users = await User.find({ listId, unsubscribed: false });
-    await emailService.sendBulkEmails(users, subject, body, list.customProperties);
+    // await emailService.sendBulkEmails(users, subject, body, list.customProperties);
 
     res.status(200).json({ message: 'Emails sent' ,users});
   } catch (error) {

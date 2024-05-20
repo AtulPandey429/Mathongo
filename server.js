@@ -12,6 +12,9 @@ connectDB();
 
 // Middleware
 app.use(express.json());
+app.get("/",(req,res)=>{
+    res.send("hii welocome to user management")
+})
 app.use('/api/lists', listRoutes);
 app.use('/api/lists', userRoutes);
 app.use('/api/email', emailRoutes);
