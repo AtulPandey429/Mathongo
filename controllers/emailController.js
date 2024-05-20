@@ -15,7 +15,7 @@ exports.sendEmails = async (req, res) => {
     const users = await User.find({ listId, unsubscribed: false });
     await emailService.sendBulkEmails(users, subject, body, list.customProperties);
 
-    res.status(200).json({ message: 'Emails sent' });
+    res.status(200).json({ message: 'Emails sent' ,users});
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -33,7 +33,7 @@ exports.unsubscribeUser = async (req, res) => {
     user.unsubscribed = true;
     await user.save();
 
-    res.status(200).json({ message: 'User unsubscribed' });
+    res.status(200).json({ message: 'User unsubscribed' ,user:user.email});
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
